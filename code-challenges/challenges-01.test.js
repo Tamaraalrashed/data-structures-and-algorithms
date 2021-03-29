@@ -86,30 +86,28 @@ Within the addNumbers function, invoke the callback function as many times as ne
 
 Return the modified array.
 ------------------------------------------------------------------------------------------------ */
-expect(addNumbers(8, [], 5, addValues)).toStrictEqual([8, 8, 8, 8, 8]);
-    expect(addNumbers(8, [], 5, addValues).length).toStrictEqual(5);
+// expect(addNumbers(8, [], 5, addValues)).toStrictEqual([8, 8, 8, 8, 8]);
+//     expect(addNumbers(8, [], 5, addValues).length).toStrictEqual(5);
 
 const addValues = (arr, value) => {
  arr.push(value);
 };
 
 const addNumbers = (num, arr, times, callback) => {
-  let newArr=[];
-  arr.length=times;
+  
   for (let index = 0; index < times; index++) {
-    arr.forEach= (arr, num) => {
-      newArr.push(callback(arr, num));
-    });
-    return newArr;
-    
+    callback(arr, num);
+   
+  
   }
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
 
 CHALLENGE 6
 
-Write a function named createList that takes in an array of the current store intentory.
+Write a function named createList that takes in an array of the current store inventory.
 
 The inventory is formatted like this:
 [
@@ -124,7 +122,14 @@ This function should use forEach to populate your grocery list based on the stor
 ------------------------------------------------------------------------------------------------ */
 
 const createList = (availableItems) => {
-  // Solution code here...
+  let newArr=[];
+  availableItems.forEach(value=>{
+    if(value.available===true){
+      newArr.push(value.name);
+    }
+  });
+  return newArr;  
+  
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -187,14 +192,14 @@ describe('Testing challenge 5', () => {
   });
 });
 
-// describe('Testing challenge 6', () => {
-//   const inventory = [{ name: 'apples', available: true }, { name: 'pears', available: true }, { name: 'oranges', available: false }, { name: 'bananas', available: true }, { name: 'blueberries', available: false }];
+describe('Testing challenge 6', () => {
+  const inventory = [{ name: 'apples', available: true }, { name: 'pears', available: true }, { name: 'oranges', available: false }, { name: 'bananas', available: true }, { name: 'blueberries', available: false }];
 
-//   test('It should only add the available items to the list', () => {
-//     expect(createList(inventory)).toStrictEqual(['apples', 'pears', 'bananas']);
-//     expect(createList(inventory).length).toStrictEqual(3);
-//   });
-// });
+  test('It should only add the available items to the list', () => {
+    expect(createList(inventory)).toStrictEqual(['apples', 'pears', 'bananas']);
+    expect(createList(inventory).length).toStrictEqual(3);
+  });
+});
 
 // xdescribe('Testing challenge 7', () => {
 //   const inputs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
