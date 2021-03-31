@@ -22,7 +22,7 @@ Write a function named containsW that takes in a string. This function should us
 ------------------------------------------------------------------------------------------------ */
 
 const containsW = (str) => {
- let regex1= /[a-z]/g;
+ let regex1= /w/g;
  return regex1.test(str);/// Solution code here...
 };
 
@@ -64,13 +64,13 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
-  let regex1 =/^[A-Z]\w*/g;
+  let regex1 =/\b[A-Z]\w*/g;
   let newArr=[];
-
-if(regex1.test(str)){
-  newArr.push(str);
+if (str.match(regex1)){
+  newArr=str.match(regex1);
 }
- return newArr;
+return newArr;
+//  return str.match(regex1);
  // Solution code here...
 };
 
@@ -85,7 +85,7 @@ const citiesAtoJ = (arr) => {
   let newArr=[];
   
 arr.forEach(val=>{
-  if(regex1.test(val)){
+  if(val.match(regex1)){
     newArr.push(val);
   }
 })
