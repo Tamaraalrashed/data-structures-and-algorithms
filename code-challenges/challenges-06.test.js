@@ -55,10 +55,17 @@ let characters = [
 ];
 
 const sortByChildren = (charArray) => {
-  charArray.forEach(element => {
-    
+  charArray.sort((a,b) =>{
+    if (a.children.length===b.children.length){
+ 
+      return  a.house.localeCompare(b.house)
+    }
+    else{
+      return  a.children.length-b.children.length
+    }
   });
-  // Solution code here...
+  return charArray;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -117,6 +124,7 @@ HR has asked you to change the data to make it easier to print so that it looks 
 ------------------------------------------------------------------------------------------------ */
 
 const updateNumbers = (obj) => {
+  
   let arr= Object.entries(obj);
   let x=[];
  
@@ -158,6 +166,18 @@ hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenValues = (arr, character) => {
+  let obj = {};
+  for (let i = 0; i < arr.length; i++) {
+    obj[arr[i].key] = arr[i].value;
+  }
+  let x= Object.values(obj);
+  if (character==x) {
+    return true; 
+  }
+
+else if (character== 0) {
+  return false;// Solution code here...
+};
   // Solution code here...
 
 };
