@@ -66,16 +66,16 @@ For example, if the input is 'Welcome', the output will be:
 ------------------------------------------------------------------------------------------------ */
 
 const howMuchPencil = (str) => {
-//   let result = [];
-//  let strToarray=str.split('');
-//  result.push(strToarray);
-//  for (let i = 0; i < result.length; i++) {
-//   str.slice(`'${i+1}'`);
-//    result.push(str);
-   
-//  } // Solution code here...
-//   return result;
+  let result = [];
+  for (let i = 0; i < str.length; i++) {
+  str.slice(`${i}`);
+  result.push(str);
+ 
+ }
+  // Solution code here...
+  return result;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -149,6 +149,7 @@ You may also use other string or array methods.
 
 const splitFoods = (recipe) => {
   let result = [];
+  
   // Solution code here...
   return result;
 };
