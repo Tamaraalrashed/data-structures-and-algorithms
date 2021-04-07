@@ -66,7 +66,8 @@ For example, filterStringsWithVowels('gregor','hound','xyz') returns ['gregor', 
 
 const filterStringsWithVowels = (arr) => {
   let newArr=arr.filter((n=>{
-    if(n=='a'||'e'||'i'||'o'||'u'){
+    
+    if(n.indexOf(arr)=='a'||'e'||'i'||'o'||'u'){
       return 1;
     }
   })) 
