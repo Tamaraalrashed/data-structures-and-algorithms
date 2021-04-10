@@ -14,11 +14,11 @@ HINT: Look at the tests to see how the callback functions are used.
 ------------------------------------------------------------------------------------------------ */
 
 function upper(str) {
-  return str; 
+  return str.toUpperCase(); 
 }
 
 function lower(str) {
-  return str;
+  return str.toLowerCase();
 }
 
 const updateAnimal = (arr, callback) => {
@@ -40,8 +40,8 @@ For example: 'Cat' would come before 'apple'
 
 const sortNames = (arr) => {
  arr.sort(function(a,b){
-  if (a.toLowerCase() > b.toLowerCase() || a<b) return -1;
-  if (a.toLowerCase() < b.toLowerCase() || a>b) return 1;      
+  if (a < b) return -1;
+  if (a > b) return 1;      
   return 0;});  
   return arr;};
 
