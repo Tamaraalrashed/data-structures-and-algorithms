@@ -14,11 +14,11 @@ HINT: Look at the tests to see how the callback functions are used.
 ------------------------------------------------------------------------------------------------ */
 
 function upper(str) {
-  return str.toUpperCase(); 
+  return str; 
 }
 
 function lower(str) {
-  return str.toLowerCase();
+  return str;
 }
 
 const updateAnimal = (arr, callback) => {
