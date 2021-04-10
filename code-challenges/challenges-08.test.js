@@ -8,7 +8,8 @@ Write a function named returnTen, takes in a string and uses split and splice to
 ------------------------------------------------------------------------------------------------ */
 
 function returnTen(str){
-  // Solution code here...
+let splittedString= str.split('').splice(-10);
+return splittedString;// Solution code here...
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -35,6 +36,13 @@ For example, containsAnd(['panda', 'ran', 'and']) returns ['panda', 'and'].
 ------------------------------------------------------------------------------------------------ */
 
 const containsAnd = (arr) => {
+  let regex1 = /and/g;
+  let andArr=arr.filter((item=>{
+   if(item.match(regex1)){
+    return  item  
+   }
+  }))
+ return andArr
   // Solution code here...
 };
 
@@ -66,11 +74,12 @@ For example, filterStringsWithVowels('gregor','hound','xyz') returns ['gregor', 
 
 const filterStringsWithVowels = (arr) => {
   let newArr=arr.filter((n=>{
-    if(n=='a'||'e'||'i'||'o'||'u'){
-      return 1;
+    let regex1 =/[i,o,e,u,a]\w*/g;
+    if(n.match(regex1)){
+      return n;
     }
   })) 
-  return newArr// Solution code here...
+  return newArr
 };
 
 
@@ -83,7 +92,10 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 ------------------------------------------------------------------------------------------------ */
 
 const notInFirstArray = (forbiddenValues, arr) => {
-  // Solution code here...
+  let newArr=arr.filter((n=>{
+  return !forbiddenValues.includes(n); 
+  }));
+  return newArr
 };
 
 /* ------------------------------------------------------------------------------------------------
