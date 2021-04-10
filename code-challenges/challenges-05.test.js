@@ -37,7 +37,7 @@ Write a function named removeThree that takes an index and an array. The functio
 ------------------------------------------------------------------------------------------------ */
 
 const removeThree = (idx, arr) => {
-  arr.splice(idx,3)
+  arr.splice(idx,3);
   return arr;// Solution code here...
 };
 
@@ -66,15 +66,12 @@ For example, if the input is 'Welcome', the output will be:
 ------------------------------------------------------------------------------------------------ */
 
 const howMuchPencil = (str) => {
-//   let result = [];
-//  let strToarray=str.split('');
-//  result.push(strToarray);
-//  for (let i = 0; i < result.length; i++) {
-//   str.slice(`'${i+1}'`);
-//    result.push(str);
-   
-//  } // Solution code here...
-//   return result;
+let result=[];
+for (let i = 0; i <= str.length; i++) {
+  let element = str.slice(i, str.length);
+  result.push(element);
+}
+return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -133,8 +130,13 @@ const gruffaloCrumble = {
 
 
 const listFoods = (recipe) => {
+  let words=['Gruffalo', 'oats', 'brown sugar', 'flour', 'pure maple syrup', 'chopped nuts', 'baking soda', 'baking powder', 'cinnamon', 'melted butter', 'fresh water' ]
   let result = [];
-
+  for (let i = 0; i < recipe.ingredients.length; i++) {
+  
+    let y=recipe.ingredients[i].slice(recipe.ingredients[i].indexOf(words[i]),recipe.ingredients[i].length);
+    result.push(y);
+  }
   // Solution code here...
   return result;
 };
@@ -149,7 +151,7 @@ You may also use other string or array methods.
 
 const splitFoods = (recipe) => {
   let result = [];
-  // Solution code here...
+ // Solution code here...
   return result;
 };
 
