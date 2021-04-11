@@ -2,7 +2,6 @@
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1 - Review
-
 Write a function called sortStarWarsCharacters that sorts the characters in the starWarsPeople array by height from tallest to shortest.
 ------------------------------------------------------------------------------------------------ */
 
@@ -25,70 +24,66 @@ let starWarsPeople = [
 ];
 
 const sortStarWarsCharacters = (starWarsArr) => {
-  // Solution code here...
+ starWarsArr.sort((a,b) =>{
+  return b.height - a.height;
+ }); return starWarsArr; 
 }
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
-
 Write a function named removeThree that takes an index and an array. The function should removes three items in the array starting with the value at the index. 
 ------------------------------------------------------------------------------------------------ */
 
 const removeThree = (idx, arr) => {
-  // Solution code here...
+  arr.splice(idx,3);
+  return arr;// Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
-
 Write a function named joinArray that takes an array and joins all of the elements together in one string on a space.
 ------------------------------------------------------------------------------------------------ */
 
 const joinArray = (arr) => {
+  return arr.join(' ');
   // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
-
 Write a function named howMuchPencil that takes in a string, as written on the side of a pencil.
-
 As you sharpen the pencil, the string will become shorter and shorter, starting by removing the first letter.
-
 Your function should use slice within a loop and return an array of each successive string result from losing letters to the sharpener, until nothing is left.
-
 For example, if the input is 'Welcome', the output will be:
 ['Welcome', 'elcome', 'lcome', 'come', 'ome', 'me', 'e', ''].
 ------------------------------------------------------------------------------------------------ */
 
 const howMuchPencil = (str) => {
-  let result = [];
-  // Solution code here...
-  return result;
+let result=[];
+for (let i = 0; i <= str.length; i++) {
+  let element = str.slice(i, str.length);
+  result.push(element);
+}
+return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
-
 Write a function name wordsToCharList that, given a string as input, returns a new array where every element is a character of the input string.
-
 For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 ------------------------------------------------------------------------------------------------ */
 
 const wordsToCharList = (arr) => {
-  // Solution code here...
+  return arr.split('');
+
 };
 
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
-
 You are making a grocery list for ingredients needed in the gruffalo crumble recipe, below. Rather than taking the entire recipe, you only want a list of the item names.
-
 Write a function named listFoods that takes in the recipe and returns a new array of the food items without any amount or units. Just the name. For example, '1 cup flour' will return 'flour'.
-
 Use slice for this function, maybe more than once. The Array.indexOf() method may also be helpful.
-
 Do not use split for this function.
 ------------------------------------------------------------------------------------------------ */
 
@@ -122,7 +117,13 @@ const gruffaloCrumble = {
 
 
 const listFoods = (recipe) => {
+  let words=['Gruffalo', 'oats', 'brown sugar', 'flour', 'pure maple syrup', 'chopped nuts', 'baking soda', 'baking powder', 'cinnamon', 'melted butter', 'fresh water' ]
   let result = [];
+  for (let i = 0; i < recipe.ingredients.length; i++) {
+  
+    let y=recipe.ingredients[i].slice(recipe.ingredients[i].indexOf(words[i]),recipe.ingredients[i].length);
+    result.push(y);
+  }
   // Solution code here...
   return result;
 };
