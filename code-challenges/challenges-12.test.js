@@ -9,15 +9,15 @@ using the 'reduce' method.
 E.g. [4,2,7,5,9,2] -> 9
 ------------------------------------------------------------------------------------------------ */
 const maxInArray = (arr) => {
-  let maxNum=arr.reduce((acc,val)=>{  
-  if(val>acc){
-    return val
-  }
-  else{
-    return acc
-  }
-},0);
-return maxNum
+  let maxNum=arr.reduce((acc,val)=>{
+    if(val>acc){
+      return val;
+    }
+    else{
+      return acc;
+    }
+  },0);
+  return maxNum;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -25,7 +25,7 @@ CHALLENGE 2
 
 Write a function named findMax that takes in a matrix of positive numbers and returns the number with the highest value.
 
-For example: 
+For example:
 [
   [1, 3, 4, 5],
   [4, 5, 6],
@@ -36,17 +36,12 @@ return: 23
 ------------------------------------------------------------------------------------------------ */
 const findMax = (matrix) => {
   let arr1=matrix.reduce((acc,val)=>{
-val.reduce((acc2,val2)=>{
-  if(val2>acc){
-    return val2
-  }
-  else{
-    return acc2
-  }
-},0)
-return val;
-  },0)
-  return arr1// Solution code here...
+    let arr2=val.reduce((acc2,val2)=>{
+      return (val2>acc2)? val2:acc2;
+    },0);
+    return (arr2>acc)? arr2:acc;
+  },0);
+  return arr1;// Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -54,7 +49,7 @@ CHALLENGE 3
 
 Write a function named totalSum that takes in a matrix of numbers and returns the totalSum of all the numbers.
 
-For example: 
+For example:
 [
   [1, 3, 4, 5],
   [4, 5, 1],
@@ -64,7 +59,14 @@ For example:
 return: 35
 ------------------------------------------------------------------------------------------------ */
 const totalSum = (matrix) => {
-  // Solution code here...
+  let sum=0;
+  matrix.forEach(element => {
+    element.forEach(item => {
+      sum=sum+item;
+    });
+    return sum;
+  });
+  return sum; // Solution code here...
 };
 
 
