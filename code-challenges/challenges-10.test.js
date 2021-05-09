@@ -5,13 +5,13 @@ CHALLENGE 1 - Review
 
 Write a function named getNames that, given an array of people objects, uses map to return an array of names reversed.
 
-For example: 
+For example:
 [
 {
   name: 'lloyd',
   age: 32,
   shoeSize: 12
-}, 
+},
 {
   name: 'jamie',
   age: 21,
@@ -25,8 +25,8 @@ Returns: ['dyoll', 'eimaj'];
 const getNames = (arr) => {
   let namesArr=arr.map((val)=>{
     let x=val.name.split('').reverse().join('');
-return x;
-  })
+    return x;
+  });
   return namesArr;// Solution code here...
 };
 
@@ -42,16 +42,16 @@ For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 
 const count = (target, input) => {
   let sum = input.reduce(function (accumulator,currentvalue) {
-   let sum2= currentvalue.reduce(function (acc,val) {
-    if (val===target){
-   acc++;
-      return acc
-    }
-      return acc  
- }, 0)  // Solution code here...
-return  accumulator=accumulator+sum2;;
- }, 0)  // Solution code here...
- return sum;// Solution code here...
+    let sum2= currentvalue.reduce(function (acc,val) {
+      if (val===target){
+        acc++;
+        return acc;
+      }
+      return acc;
+    }, 0); // Solution code here...
+    return accumulator=accumulator+sum2;
+  }, 0); // Solution code here...
+  return sum;// Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -67,11 +67,11 @@ For example, [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]] returns 66.
 const totalSum = (input) => {
   let sum = input.reduce(function (accumulator,currentvalue) {
     let sum2= currentvalue.reduce(function (acc,val) {
-  return acc+val
-  }, 0)  
- return  accumulator=accumulator+sum2;;
-  }, 0)  
-  return sum; 
+      return acc+val;
+    }, 0);
+    return accumulator=accumulator+sum2;
+  }, 0);
+  return sum;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -87,11 +87,29 @@ For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 ------------------------------------------------------------------------------------------------ */
 
 const divisibleByFiveTwoToThePower = (input) => {
-  // Solution code here...
+  let newArr= input.map(element=>{
+    let arr2=element.filter(item=>{
+      if (typeof item === 'number'){
+        if(item % 5 === 0){
+          return item;
+        }
+      }
+
+    });
+    return(arr2);
+  });
+  let array=newArr.map(element=>{
+    let arr3=element.map(item=>{
+      let x=Math.pow(2, item);
+      return x;
+    });
+    return arr3;
+  });
+  return(array);// Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
-CHALLENGE 5 
+CHALLENGE 5
 
 Write a function named findMaleAndFemale that, given the Star Wars data, below,
 returns the names of the characters whose gender is either male or female.
@@ -153,22 +171,35 @@ let starWarsData = [{
 }];
 
 let findMaleAndFemale = (data) => {
- let arr= data.filter((val=>{
-   return val.name
- }
-  ))
-  let arr2=arr.map((val=>{
-    return val.split('and')
-  })) // Solution code here...
+  let arr= data.filter((val=>{
+    if (val.gender==='female' ||val.gender==='male'){
+      return val.name;
+    }
+
+  }
+  ));
+  let arr2=arr.map(item=>{
+    return item.name;
+  });
+
+  return arr2.join(' and ');
+
 };
 
 /* ------------------------------------------------------------------------------------------------
-CHALLENGE 6 
+CHALLENGE 6
 
 Write a function named findShortest that, given the Star Wars data from Challenge 6, uses any combination of filter, map and reduce to return the name of the shortest character.
 ------------------------------------------------------------------------------------------------ */
 
 let findShortest = (data) => {
+  data.sort((a,b)=>{
+    if (a.height >b.height)return -1;
+    else if(a.height < b.height)return 1;
+    else return 0;
+  });
+ 
+   return data[0].name;
   // Solution code here...
 };
 
