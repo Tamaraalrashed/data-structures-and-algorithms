@@ -12,10 +12,10 @@ const raisedToTheThird = (arr) => {
   let newArr=[];
   arr.forEach(element => {
     let thirdPower=Math.pow(element, 3);
-newArr.push(thirdPower);
+    newArr.push(thirdPower);
   });
   return newArr;
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -25,7 +25,7 @@ Write a function that appends ' The end.' to a string, and returns the modified 
 ------------------------------------------------------------------------------------------------ */
 
 const appendTheEnd = (str) => {
-return `${str} The end.`
+  return `${str} The end.`;
 
   // Solution code here...
 };
@@ -64,7 +64,7 @@ console.log(a) prints { fullName: 'Octavia Estelle Butler', yearBorn: 1947 }
 
 const addBirthYearProperty = (obj, year) => {
   obj.yearBorn=year;
-  
+
 };
 
 /* ------------------------------------------------------------------------------------------------
