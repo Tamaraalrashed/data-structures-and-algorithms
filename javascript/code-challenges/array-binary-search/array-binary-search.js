@@ -1,7 +1,5 @@
 'use strict';
-let arr1=[4, 8, 15, 16, 23, 42];
-let arr2=[11, 22, 33, 44, 55, 66, 77];
-let arr3=[];
+
 function BinarySearch (sortedArray, value){
   let start = 0;
   let end = sortedArray.length - 1;
@@ -23,6 +21,4 @@ function BinarySearch (sortedArray, value){
   return -1;
 }
 
-BinarySearch(arr1,15);
-BinarySearch(arr2,4);
-BinarySearch(arr3,5);
+module.exports=BinarySearch;
