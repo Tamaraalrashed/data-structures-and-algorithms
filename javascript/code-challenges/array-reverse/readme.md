@@ -1,6 +1,6 @@
 # Array Reverse
 
-This is a program takes an array and return    a reversed array without using built-in methods.
+This is a program takes an array and return a reversed array without using built-in methods.
 
 ## Whiteboard Process
 
