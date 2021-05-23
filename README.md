@@ -21,3 +21,5 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 |:-------:|:---|
 |Array reverse|[readme](./javascript/code-challenges/)|
 |Array shift|[readme](./javascript/code-challenges/array-shift/readme.md)|
+|Array shift|[readme](./javascript/code-challenges/array-shift/readme.md)|
+|Linked-List|[readme](./javascript/code-challenges/linked-list/readme.md)|

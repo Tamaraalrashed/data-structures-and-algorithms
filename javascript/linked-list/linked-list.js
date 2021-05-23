@@ -11,14 +11,11 @@ class LinkedList{
     let node =new Node(value);
     if(!this.head) {
       this.head=node;
-      return this;
+
     }
     else{
-      let lastNode=this.head;
-      while(lastNode.next){
-        lastNode=lastNode.next;
-      }
-      lastNode.next = node;
+      node.next = this.head;
+      this.head = node;
     }
   }
 
@@ -36,7 +33,7 @@ class LinkedList{
     let node =this.head;
     let stingsArray=[];
     while(node){
-    
+
       stingsArray.push(`{ ${node.value} } -> `);
       node=node.next;
     }

@@ -26,8 +26,8 @@ describe('Linked List', () => {
     //act
     linkedList.insert(newValue);
     //assert
-    expect(linkedList.head.next.value).toEqual(newValue);
-    expect(linkedList.head.next.next).toBeNull();
+    expect(linkedList.head.value).toEqual(newValue);
+    expect(linkedList.head.next.value).toEqual(7);
   });
 
   it('he head property will properly point to the first node in the linked list', () => {
@@ -54,8 +54,8 @@ describe('Linked List', () => {
     linkedList.insert(head1);
     linkedList.insert(head2);
     //assert
-    expect(linkedList.head.value).toEqual(head1);
-    expect(linkedList.head.next.value).toEqual(head2);
+    expect(linkedList.head.value).toEqual(head2);
+    expect(linkedList.head.next.value).toEqual(head1);
 
 
 
@@ -91,7 +91,7 @@ describe('Linked List', () => {
     linkedList.insert(value3);
 
 //assert
-    expect(linkedList.toString()).toEqual('{ 7 } -> { 10 } -> { 11 } -> NULL');
+    expect(linkedList.toString()).toEqual('{ 11 } -> { 10 } -> { 7 } -> NULL');
 
   });
 
