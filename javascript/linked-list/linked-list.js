@@ -41,6 +41,69 @@ class LinkedList{
     return stingsArray.join('');
   }
 
+  append(value){
+    if(!value){
+      throw new Error('You did not insert value ');
+    }
+    let node = new Node(value);
+    if(!this.head){
+      this.head = node;
+    }
+    else {
+      let current = this.head;
+      while(current.next !== null){
+        current = current.next;
+      }
+      current.next = node;
+    }
+  }
+
+  insertBefore(value, newValue){
+    if(!value,newValue){
+      throw new Error('You did not insert value');
+    }
+
+    let node = new Node(newValue);
+
+    if(this.head === value){
+      node.next = this.head;
+      this.head = node;
+    }
+    else {
+      let temp = this.head;
+      while(temp.next !== null){
+
+        if(temp.next.value === value){
+          node.next = temp.next;
+          temp.next = node;
+          return;
+        }
+        temp = temp.next;
+      }
+      throw new Error('Exception');
+    }
+  }
+
+  insertAfter(value, newValue){
+    if(!value,newValue){
+      throw new Error('You did not insert value');
+    }
+    let node = new Node(newValue);
+    if(this.head === value){
+      this.head.next = node;
+    } else{
+      let current = this.head;
+      while(current !== null){
+        if(current.value === value){
+          node.next = current.next;
+          current.next = node;
+          return;
+        }
+        current = current.next;
+      }
+      throw new Error('Exception!');
+    }
+  }
 }
 
 module.exports=LinkedList;
