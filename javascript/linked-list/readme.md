@@ -9,3 +9,7 @@ Insertion:
 
 ![img](./img/bigO.jpeg)
 <br>
+
+
+For K value whiteboard:
+![img](./img/4.png)
