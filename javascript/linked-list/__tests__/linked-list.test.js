@@ -130,25 +130,29 @@ describe('Linked List', () => {
     linkedList.insert(value2);
     linkedList.insert(value3);
     linkedList.insert(value4);
-    linkedList.insertBefore(value2,value5);
+    linkedList.insertBefore(value3,value5);
     //assert
-    expect(linkedList.head.next.next.value).toEqual(value5);
+    expect(linkedList.head.next.value).toEqual(value5);
   });
 
-  it('should successfully insert a node before the first node of a linked list',() => {
+  it('Can successfully insert a node before the first node of a linked list',() => {
     let linkedList = new LinkedList();
-    linkedList.insert(6);
-    linkedList.insertBefore(6,7);
-    expect(linkedList.head.value).toEqual(7);
+    //act
+    linkedList.insert(8);
+    linkedList.insertBefore(8,10);
+    //assert
+    expect(linkedList.head.value).toEqual(10);
   });
 
-  it('should successfully insert after a node in the middle of the linked list',() => {
+  it('Can successfully insert after a node in the middle of the linked list',() => {
     let linkedList = new LinkedList();
+    //act
     linkedList.insert(1);
     linkedList.insert(2);
     linkedList.insert(3);
     linkedList.insertAfter(2,4);
-    expect(linkedList.head.next.value).toEqual(4);
+
+    expect(linkedList.toString()).toEqual('{ 3 } -> { 2 } -> { 4 } -> { 1 } -> NULL');
   });
 
   it('should successfully insert a node after the last node of the linked list',() => {

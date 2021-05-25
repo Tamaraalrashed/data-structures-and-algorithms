@@ -59,37 +59,37 @@ class LinkedList{
   }
 
   insertBefore(value, newValue){
-    if(!value,newValue){
+    if(!value && newValue){
       throw new Error('You did not insert value');
     }
 
     let node = new Node(newValue);
 
-    if(this.head === value){
+    if(this.head.value === value){
       node.next = this.head;
       this.head = node;
     }
     else {
-      let temp = this.head;
-      while(temp.next !== null){
+      let current = this.head;
+      while(current.next !== null){
 
-        if(temp.next.value === value){
-          node.next = temp.next;
-          temp.next = node;
+        if(current.next.value === value){
+          node.next = current.next;
+          current.next = node;
           return;
         }
-        temp = temp.next;
+        current = current.next;
       }
       throw new Error('Exception');
     }
   }
 
   insertAfter(value, newValue){
-    if(!value,newValue){
+    if(!value && newValue){
       throw new Error('You did not insert value');
     }
     let node = new Node(newValue);
-    if(this.head === value){
+    if(this.head.value === value){
       this.head.next = node;
     } else{
       let current = this.head;
@@ -104,6 +104,7 @@ class LinkedList{
       throw new Error('Exception!');
     }
   }
+
 }
 
 module.exports=LinkedList;
