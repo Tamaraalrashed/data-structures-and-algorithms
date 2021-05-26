@@ -85,12 +85,12 @@ describe('Linked List', () => {
     let value = 7;
     let value2=10;
     let value3 = 11;
- 
+
     linkedList.insert(value);
     linkedList.insert(value2);
     linkedList.insert(value3);
 
-//assert
+    //assert
     expect(linkedList.toString()).toEqual('{ 11 } -> { 10 } -> { 7 } -> NULL');
 
   });
@@ -151,18 +151,83 @@ describe('Linked List', () => {
     linkedList.insert(2);
     linkedList.insert(3);
     linkedList.insertAfter(2,4);
-
+    //assert
     expect(linkedList.toString()).toEqual('{ 3 } -> { 2 } -> { 4 } -> { 1 } -> NULL');
   });
 
   it('should successfully insert a node after the last node of the linked list',() => {
+    //arrange
     let linkedList = new LinkedList();
+    //act
     linkedList.insert(1);
     linkedList.insert(2);
     linkedList.insertAfter(1,3);
+    //assert
     expect(linkedList.head.next.next.value).toEqual(3);
   });
 
+  it('k is greater than the length of the linked list',() => {
+    //arrange
+    let linkedList = new LinkedList();
+    //act
+    linkedList.insert(1);
+    linkedList.insert(2);
+    linkedList.insert(3);
+    function x(){
+      linkedList.kthFromEnd(4);
+    }
+
+    //assert
+    expect(x).toThrow();
+  });
+
+  it('k and the length of the list are the same',() => {
+    //arrange
+    let linkedList = new LinkedList();
+    //act
+    linkedList.insert(1);
+    linkedList.insert(2);
+    linkedList.insert(3);
+    function x(){
+      linkedList.kthFromEnd(3);
+    }
+    //assert
+    expect(x).toThrow();
+  });
+
+  it('k is not a positive integer',() => {
+    //arrange
+    let linkedList = new LinkedList();
+    //act
+    linkedList.insert(1);
+    linkedList.insert(2);
+    linkedList.insert(3);
+    function x(){
+      linkedList.kthFromEnd(-1);
+    }
+    //assert
+    expect(x).toThrow('You did not insert  k value or k is negative value');
+  });
+
+
+  it('the linked list is of a size 1',() => {
+    let linkedList = new LinkedList();
+    linkedList.insert(1);
+    let kValue = linkedList.kthFromEnd(0);
+    expect(kValue.value).toEqual(1);
+  });
+  it('should return the value except the end or the beginning',() => {
+    //arrange
+    let linkedList = new LinkedList();
+    //act
+    linkedList.insert(1);
+    linkedList.insert(2);
+    linkedList.insert(3);
+    linkedList.insert(4);
+    let kValue =  linkedList.kthFromEnd(2);
+    //assert
+    expect(kValue.value).toEqual(3);
+  });
 
 
 });

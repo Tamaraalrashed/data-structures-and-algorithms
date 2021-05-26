@@ -1,3 +1,7 @@
+# Challenge Summary
+
+
+## Whiteboard Process
 Singly Linked List :
 
 Insertion:
@@ -9,3 +13,7 @@ Insertion:
 
 ![img](./img/bigO.jpeg)
 <br>
+
+
+For K value whiteboard:
+![img](./img/4.png)
