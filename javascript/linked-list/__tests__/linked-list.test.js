@@ -209,19 +209,25 @@ describe('Linked List', () => {
     expect(x).toThrow('You did not insert  k value or k is negative value');
   });
 
+
   it('the linked list is of a size 1',() => {
+    let linkedList = new LinkedList();
+    linkedList.insert(1);
+    let kValue = linkedList.kthFromEnd(0);
+    expect(kValue.value).toEqual(1);
+  });
+  it('should return the value except the end or the beginning',() => {
     //arrange
     let linkedList = new LinkedList();
     //act
     linkedList.insert(1);
-    let kValue=linkedList.kthFromEnd(0);
-
+    linkedList.insert(2);
+    linkedList.insert(3);
+    linkedList.insert(4);
+    let kValue =  linkedList.kthFromEnd(2);
     //assert
-    expect(kValue.value).toEqual(1);
-    
+    expect(kValue.value).toEqual(3);
   });
-
-
 
 
 });

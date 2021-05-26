@@ -105,17 +105,22 @@ class LinkedList{
     }
   }
 
+
   kthFromEnd(k){
-    if (k ===null || k<0){ throw new Error('You did not insert  k value or k is negative value');}
-    let size=0;
-    let current =this.head;
-    while(current!==null){
-      current=current.next;
+    if(k===null||k<0){
+      throw new Error('You did not insert  k value or k is negative value');
+    }
+    let current = this.head;
+    let size = 0;
+    while(current !== null){
+      current = current.next;
       size++;
     }
 
-    if(k>size-1){throw new Error('k value is greater than the ll size ');}
-    let value=size-k-1;
+    if(k>size-1){
+      throw new Error('k value is greater than the ll size');
+    }
+    let value = size-k-1;
     current = this.head;
     while(value !== 0){
       current = current.next;
@@ -123,9 +128,6 @@ class LinkedList{
     }
     return current;
   }
-
-
-
 
 
 }
