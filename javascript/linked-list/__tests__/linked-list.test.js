@@ -1,8 +1,8 @@
-'use strict';
 
+'use strict';
 // Require our linked list implementation
 const LinkedList = require('../linked-list.js');
-const Node = require('../node.js');
+
 
 describe('Linked List', () => {
   it('works', () => {
