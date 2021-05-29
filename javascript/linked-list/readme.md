@@ -19,6 +19,7 @@ Within your LinkedList class, include a head property. Upon instantiation, an em
 
 ## Whiteboard
 
+`Create:`
 ![img](img/1-5.jpeg)
 
 <br>
