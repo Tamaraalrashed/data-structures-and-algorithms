@@ -22,17 +22,19 @@ class Stack{
   pop(){
     if (this.size===0) throw new Error('this is an empty stack!');
     else{
+
+      let current = this.top;
+      this.top = this.top.next;
       this.size=this.size-1;
-      this.top=this.top.next;
-      // console.log('pop',this);
-      return this;
+      current.next = null;
+      return current.value;
 
     }
   }
   peek(){
     if (this.size===0) throw new Error('this is an empty stack!');
     else{
-      return this.top;
+      return this.top.value;
     }
   }
   isEmpty(){
@@ -82,7 +84,7 @@ class Queue{
   peek(){
     if (this.size===0) throw new Error('this is an empty queue!');
     else{
-      return this.front;
+      return this.front.value;
     }
   }
 

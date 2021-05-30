@@ -17,7 +17,7 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 
 
 ### 401 Code Challenges
-|file name|link|
+|File name|Link|
 |:-------:|:---|
 |Array reverse|[readme](./javascript/code-challenges/)|
 |Array shift|[readme](./javascript/code-challenges/array-shift/readme.md)|
@@ -25,4 +25,4 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 |Linked-List|[readme](./javascript/linked-list/readme.md)|
 |Zip-List|[readme](./javascript/ll_zip/readme.md)|
 |Stack & Queue|[readme](./javascript/stacksAndQueues/readme.md)|
-
+|Queue with Stacks|[readme](./javascript/code-challenges/queueWithStacks/readme.md)|
