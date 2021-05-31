@@ -25,4 +25,4 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 |Linked-List|[readme](./javascript/linked-list/readme.md)|
 |Zip-List|[readme](./javascript/ll_zip/readme.md)|
 |Stack & Queue|[readme](./javascript/stacksAndQueues/readme.md)|
-
+|FIFO animal shelter|[readme](./javascript/code-challenges/fifoAnimalShelter/readme.md)|
