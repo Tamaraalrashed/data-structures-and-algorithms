@@ -1,6 +1,5 @@
 'use strict';
 const {expect} = require('@jest/globals');
-// const LinkedList=require('../linked-list/linked-list.js');
 const { Stack, Queue } = require('./stacks-and-queues.js');
 
 
@@ -66,7 +65,7 @@ describe( 'Stack Tests' ,()=>{
     let x=stack.peek();
     //assert
 
-    expect(x.value).toEqual( 200 );
+    expect(x).toEqual( 200 );
 
   } );
 
@@ -142,11 +141,8 @@ describe( 'Queue Tests' ,()=>{
     queue.enqueue(200);
     queue.enqueue(300);
     queue.dequeue();
-
     //assert
     expect(queue.front.value).toEqual( 200 );
-
-
   } );
 
 
@@ -159,7 +155,7 @@ describe( 'Queue Tests' ,()=>{
     let x=queue.peek();
     //assert
 
-    expect(x.value).toEqual( 100 );
+    expect(x).toEqual( 100 );
 
   } );
 
