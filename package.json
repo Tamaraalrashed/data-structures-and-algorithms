@@ -6,6 +6,7 @@
   "scripts": {
     "get-challenge": "`which bash` ./code-challenges/bin/get-challenge.sh",
     "test": "jest --verbose --coverage",
+    "test-watch": "jest --verbose --coverage --watch",
     "lint": "eslint '**/*.js'"
   },
   "author": "",
@@ -13,6 +14,7 @@
   "dependencies": {
     "cheerio": "^1.0.0-rc.3",
     "eslint": "^7.2.0",
+    "faker": "^5.5.3",
     "jest": "^26.0.1",
     "mustache": "^4.0.1",
     "supertest": "^4.0.2"
