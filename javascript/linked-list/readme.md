@@ -16,8 +16,11 @@ Within your LinkedList class, include a head property. Upon instantiation, an em
  1. Method `includes` which takes any value as an argument and returns a boolean result depending on whether that value exists as a Node’s value somewhere within the list.
  1. Method `toString` which takes in no arguments and returns a string representing all the values in the Linked List, formatted as:<br>
 ```"{ a } -> { b } -> { c } -> NULL"```
+ 1. `.append(value)` which adds a new node with the given value to the end of the list.
+ 1. `.insertBefore(value, newVal)` which add a new node with the given newValue immediately before the first value node.
+ 1. `.insertAfter(value, newVal)` which add a new node with the given newValue immediately after the first value node.
 
-## Whiteboard
+## Whiteboard Process
 
 `Create:`
 ![img](img/1-5.jpeg)
@@ -27,7 +30,9 @@ Within your LinkedList class, include a head property. Upon instantiation, an em
 ![img](img/2-5.jpeg)
 
 
-`Insertion:` <br>
+`Insertion:` 
+
+<br>
 ![img](img/1-append.jpeg)
 <br>
 
@@ -39,4 +44,6 @@ Within your LinkedList class, include a head property. Upon instantiation, an em
 
 
 `For K value whiteboard:`
+<br>
+
 ![img](./img/4-k.png)
