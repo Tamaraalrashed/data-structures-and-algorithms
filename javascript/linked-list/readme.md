@@ -34,6 +34,7 @@ Within your LinkedList class, include a head property. Upon instantiation, an em
 
 <br>
 ![img](img/1-append.jpeg)
+
 <br>
 
 ![img](./img/2-6.jpeg)
