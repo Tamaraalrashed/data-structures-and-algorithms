@@ -11,13 +11,11 @@ Define a method for each of the depth first traversals called preOrder, inOrder,
   - Define a method named contains that accepts a value, and returns a boolean indicating whether or not the value is in the tree at least once.
 
 ## Whiteboard Process
+<br>
 
-![img]()
-
-
-
-
-
+![img](./img/1-tree.jpeg)
+![img](./img/2-tree.jpeg)
+![img](./img/3-tree.jpeg)
 
 ## API
 <br>
@@ -25,6 +23,3 @@ Define a method for each of the depth first traversals called preOrder, inOrder,
  - `Add ` method accepts a value, and adds a new node with that value in the correct location in the binary search tree.
   
 - `contains` method accepts a value, and returns a boolean indicating whether or not the value is in the tree at least once.
-
-
-
