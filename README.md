@@ -27,4 +27,4 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 |Stack & Queue|[readme](./javascript/stacksAndQueues/readme.md)|
 |Queue with Stacks|[readme](./javascript/code-challenges/queueWithStacks/readme.md)|
 |FIFO animal shelter|[readme](./javascript/code-challenges/fifoAnimalShelter/readme.md)|
-|Tree|[readme](./javascript/code-challenges/tree/readme.md)|
+|Tree|[readme](./javascript/tree/readme.md)|
