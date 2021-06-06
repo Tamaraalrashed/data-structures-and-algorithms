@@ -29,6 +29,6 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 |FIFO animal shelter|[readme](./javascript/code-challenges/fifoAnimalShelter/readme.md)|
 |Multi Bracket Validation|[readme](./javascript/code-challenges/multiBracketValidation/readme.md)|
 |Tree|[readme](./javascript/tree/readme.md)|
-
+|Multi Bracket Validation|[readme](./javascript/code-challenges/multiBracketValidation/readme.md)|
 
 
