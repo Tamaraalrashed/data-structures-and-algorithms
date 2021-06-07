@@ -84,7 +84,7 @@ describe('Binary Tree', () => {
 describe('Binary Search Tests', () => {
   beforeAll(() => {
     let one = new Node(10);// tree root
- 
+
     tree=new BinarySearchTree(one);
 
     //      10
@@ -115,7 +115,38 @@ describe('Binary Search Tests', () => {
       tree.contains(null);
     }
     expect(x).toThrow();
+
+  });
+});
+
+describe('Binary Tests for maximum number method', () => {
+  beforeAll(() => {
+    let one = new Node(1);// tree root
+    let two = new Node(2);
+    let three = new Node(3);
+    let four = new Node(4);
+    let five = new Node(5);
+    let six = new Node(6);
+    one.left = two;//
+    one.right = three;//
+    two.left = six;//
+    three.left = four;
+    three.right = five;
+    tree = new BinaryTree(one);
  
+  });
+
+  it('1- Can find the maximum number of the tree I have',()=>{
+    let x= tree.findMaximumValue();
+    expect(x).toEqual(6);
+  });
+
+  it('2- Can throw an error for an empty tree',()=>{
+    let treeNew = new BinaryTree();
+    function x(){
+      treeNew.findMaximumValue();
+    }
+    expect(x).toThrow();
 
   });
 

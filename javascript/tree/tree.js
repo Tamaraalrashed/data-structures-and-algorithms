@@ -54,6 +54,31 @@ class BinaryTree{
     traverse(this.root);
     return results;
   }
+
+  findMaximumValue(){
+
+    if (this.root===null) throw new Error ('you do not  have a tree');
+    let number=0;
+    const traverse=(node)=>{
+
+      if(number<node.value){
+        number=node.value;
+        // console.log('number', number);
+      }
+      if(node.left!== null){
+        // console.log('node', node);
+        traverse(node.left);
+
+      }
+      // console.log('number after left',number);
+      if(node.right!== null) {
+        // console.log('node', node);
+        traverse(node.right);
+      }
+    };
+    traverse(this.root);
+    return number;
+  }
 }
 
 
@@ -93,7 +118,6 @@ class BinarySearchTree {
     //   search right
     // else search left
 
-    //   if (this.root === null) return 'Empty Tree';
 
     if (value===null || value ==='') throw new Error ('please enter a valid value');
     if (this.root===null) throw new Error ('you do not  have a tree');
