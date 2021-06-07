@@ -133,7 +133,10 @@ describe('Binary Tests for maximum number method', () => {
     three.left = four;
     three.right = five;
     tree = new BinaryTree(one);
- 
+    //        1
+    //  2       3
+    //6      4      5
+
   });
 
   it('1- Can find the maximum number of the tree I have',()=>{
@@ -151,6 +154,24 @@ describe('Binary Tests for maximum number method', () => {
   });
 
 });
+
+describe('Breadth First Test', () => {
+  it('1- Can use breadthFirst for tree',()=>{
+    let expected =[1,2,3,6,4,5];
+    let x= tree.breadthFirst();
+    expect(x).toEqual(expected);
+  });
+
+  it('2- Can throw an error for an empty tree',()=>{
+    let treeNew = new BinaryTree();
+    function x(){
+      treeNew.breadthFirst();
+    }
+    expect(x).toThrow();
+
+  });
+});
+
 
 
 

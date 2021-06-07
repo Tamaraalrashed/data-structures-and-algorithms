@@ -18,6 +18,8 @@ Define a method for each of the depth first traversals called preOrder, inOrder,
 ![img](./img/3-tree.jpeg)
 ![img](./img/4-treeFindmax-1.jpeg)
 ![img](./img/5-treeFindmax-2.jpeg)
+![img](./img/1-breadthFirst.jpeg)
+![img](./img/2-breadthFirst.jpeg)
 ## API
 <br>
 
@@ -33,7 +35,7 @@ Define a method for each of the depth first traversals called preOrder, inOrder,
   
 - `contains` method accepts a value, and returns a boolean indicating whether or not the value is in the tree at least once.
 
-
+- `breadthFirst` method it returns a list of the values in the tree in the order they were encountered.
 ## Solution
 
 [CLICK ON ME FOR SOLUTION CODE](./tree.js)
