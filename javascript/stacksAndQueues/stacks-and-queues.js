@@ -56,7 +56,7 @@ class Queue{
       this.front=node;
       this.tail=node;
       this.size=this.size+1;
-      return this;
+      // return this;
     }
     else{
       this.tail.next=node;
@@ -64,7 +64,7 @@ class Queue{
 
       this.size=this.size+1;
       //   console.log('enq',this);
-      return this;
+      return node;
     }
 
   }
@@ -74,11 +74,11 @@ class Queue{
     if (this.size===1) {
       this.tail = null;
     }
-
+    let current=this.front.value;
     this.front=this.front.next;
     this.size=this.size-1;
-    console.log('deq',this);
-    return this;
+  
+    return current;
 
   }
   peek(){

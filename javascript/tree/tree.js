@@ -1,5 +1,5 @@
 'use strict';
-
+const {Queue}=require('../stacksAndQueues/stacks-and-queues.js');
 
 class Node {
   constructor(value,left=null,right=null){
@@ -79,6 +79,29 @@ class BinaryTree{
     traverse(this.root);
     return number;
   }
+
+
+  breadthFirst(){
+
+    if (this.root===null) throw new Error ('you do not  have a tree');
+    let arr=[];
+    let newQueue=new Queue();
+    newQueue.enqueue(this.root);
+    while(!newQueue.isEmpty()){
+      let node=newQueue.dequeue();
+      arr.push(node.value);
+      if(node.left){
+        newQueue.enqueue(node.left);
+      }
+      if(node.right){
+        newQueue.enqueue(node.right);
+      }
+    }
+    return arr;
+  }
+
+
+
 }
 
 
