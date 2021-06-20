@@ -28,5 +28,4 @@ Big O for time is O(n) and for space as well.
 
 ## Solution
 
-[CLICK ON ME FOR SOLUTION CODE](./fizz-buzz-tree.js)
-
+[CLICK ON ME FOR SOLUTION CODE](./insertionSort.js)
