@@ -158,7 +158,9 @@ class BinarySearchTree {
 
 
 }
-
+// let tree=new BinarySearchTree();
+// tree.add(4);
+// console.log('x',tree);
 
 
 module.exports={
