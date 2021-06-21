@@ -1,31 +1,19 @@
 # Challenge Summary
 
-Write a function called FizzBuzzTree which takes a k-ary tree as an argument.<br>
-
-Without utilizing any of the built-in methods available to your language, determine whether or not the value of each node is divisible by 3, 5 or both. Create a new tree with the same structure as the original, but the values modified as follows:
-
-- If the value is divisible by 3, replace the value with “Fizz”.
-
-- If the value is divisible by 5, replace the value with “Buzz”.
-
-- If the value is divisible by 3 and 5, replace the value with “FizzBuzz”
-
-- If the value is not divisible by 3 or 5, simply return the number into a String.
-  <br>
+Selection Sort is a sorting algorithm that traverses the array multiple times as it slowly builds out the sorting sequence. The traversal keeps track of the minimum value and places it in the front of the array which should be incrementally sorted.<br>
 
 
   ## Whiteboard Process
 
-![img](./img/1-fizz.jpeg)
+![img](./img/InsertionSort.JPG)
 
-![img](./img/2-fizz.jpeg)
 
-## Approach & Efficiency
+## Blog
 
-Using a tree data structure I will determine if the value is divisible by 3, 5 or both.<br>
-Big O for time is O(n) and for space as well.
+[CLICK ON ME FOR READ BLOG](./blog.md)
 
 
 ## Solution
 
 [CLICK ON ME FOR SOLUTION CODE](./insertionSort.js)
+
