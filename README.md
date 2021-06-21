@@ -31,4 +31,4 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 |Tree|[readme](./javascript/tree/readme.md)|
 |Multi Bracket Validation|[readme](./javascript/code-challenges/multiBracketValidation/readme.md)|
 |Fizz Buzz Tree|[readme](./javascript/code-challenges/fizzBuzzTree/readme.md)|
-
+|Insertion Sort|[readme](./javascript/code-challenges/insertion-sort/readme.md)|
