@@ -1,5 +1,5 @@
 const { expect } = require('@jest/globals');
-const insertionSort = require('../insertionSort.js');
+const insertionSort = require('./insertionSort.js');
 
 describe('insertionSort', () => {
 
