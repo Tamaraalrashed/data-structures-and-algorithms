@@ -1,11 +1,11 @@
 # Challenge Summary
 
-Selection Sort is a sorting algorithm that traverses the array multiple times as it slowly builds out the sorting sequence. The traversal keeps track of the minimum value and places it in the front of the array which should be incrementally sorted.<br>
+To sort the specified list of elements, merge sort employs the divide-and-conquer strategy. It splits the problem down into smaller subproblems until they're easy to solve on their own.<br>
 
 
   ## Whiteboard Process
 
-![img](./img/InsertionSort.JPG)
+![img](./img/mergeSort.JPG)
 
 
 ## Blog
@@ -15,5 +15,5 @@ Selection Sort is a sorting algorithm that traverses the array multiple times as
 
 ## Solution
 
-[CLICK ON ME FOR SOLUTION CODE](./insertionSort.js)
+[CLICK ON ME FOR SOLUTION CODE](./mergeSort.js)
 
