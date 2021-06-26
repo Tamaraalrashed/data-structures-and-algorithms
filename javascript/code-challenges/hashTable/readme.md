@@ -1,8 +1,7 @@
-
 # Hashtables
-A hash is the result of some algorithm taking an incoming string and converting it into a value that could be used for either security or some other purpose. In the case of a hashtable, it is used to determine the index of the array.
-## Challenge
-* Implement a Hashtable Class with the following methods:
+A hash is the result of some algorithm taking an incoming string and converting it into a value that could be used for either security or some other purpose. In the case of a hash table, it is used to determine the index of the array.
+## API
+
 1. add : 
 - Arguments: key, value
 - Returns: nothing
@@ -16,23 +15,15 @@ A hash is the result of some algorithm taking an incoming string and converting 
 4. hash : 
 - Arguments: key
 - Returns: Index in the collection for that key
+- 
 ## Approach & Efficiency
 Big O :
 - time -> O(1)
 - space -> O(n)
 
 
-  ## Whiteboard Process
 
-![img](./img/quickSort.JPG)
+## Whiteboard
 
-
-## Blog
-
-[CLICK ON ME FOR READ BLOG](./blog.md)
-
-
-## Solution
-
-[CLICK ON ME FOR SOLUTION CODE](./quickSort.js)
-
+![img]()
+<br>
