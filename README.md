@@ -33,3 +33,5 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 |Fizz Buzz Tree|[readme](./javascript/code-challenges/fizzBuzzTree/readme.md)|
 |Insertion Sort|[readme](./javascript/code-challenges/insertion-sort/readme.md)|
 |Merge Sort|[readme](./javascript/code-challenges/mergeSort/readme.md)|
+|Quick Sort|[readme](./javascript/code-challenges/quickSort/readme.md)|
+
