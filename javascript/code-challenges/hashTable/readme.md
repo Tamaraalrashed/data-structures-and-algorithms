@@ -27,3 +27,8 @@ Big O :
 
 ![img]()
 <br>
+
+
+## Solution
+
+[CLICK ON ME FOR SOLUTION CODE](./hashTable.js)
