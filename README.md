@@ -35,3 +35,4 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 |Merge Sort|[readme](./javascript/code-challenges/mergeSort/readme.md)|
 |Quick Sort|[readme](./javascript/code-challenges/quickSort/readme.md)|
 |Hash Table|[readme](./javascript/code-challenges/hashTable/readme.md)|
+|Repeated Word|[readme](./javascript/code-challenges/repeatedWord/readme.md)|

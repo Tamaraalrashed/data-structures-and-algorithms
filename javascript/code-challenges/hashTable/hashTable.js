@@ -15,31 +15,36 @@ class HashTable{
 
     return hash;
   }
-
+ 
   add(key, value) {
     let hash = this.hash(key);
     if (!this.table[hash]) {
-      this.table[hash] = new LinkedList();
+      // this.table[hash] = new LinkedList();
+      this.table[hash] = [[key, value]];
     }
 
-    let keyValuePair = { [key]: value };
+    // let keyValuePair = { [key]: value };
 
-    this.table[hash].add(keyValuePair);
+    // this.table[hash].insert(keyValuePair);
+    this.table[hash] = [[key, value]];
   }
 
   get(key) {
-    let array = [];
+
     let hash = this.hash(key);
-    if(this.table[hash]){
-      this.table.map((obj) => {
-        let current = obj.head.value;
-        if(Object.keys(current) === key){
-          array.push(Object.values(current));
-          return Object.values(current);
+    const items = this.table[hash];
+   
+    if(items) {
+
+      for (let i = 0; i < items.length; i++) {
+        if (items[i][0] === key) {
+          return items[i][1];
         }
-      });
+
+      }
     }
-    return array;
+
+  
 
   }
 
@@ -50,7 +55,6 @@ class HashTable{
     else {
       return true;
     }
-
   }
 }
 
