@@ -25,6 +25,4 @@ function treeIntersection(binary1,binary2){//[1,2,3,4]
 
 }
 
-
-
 module.exports=treeIntersection;
