@@ -1,5 +1,5 @@
 
-# Hash map repeated word
+# Hash map tree-intersection
 
 ## Challenge Summary
 
