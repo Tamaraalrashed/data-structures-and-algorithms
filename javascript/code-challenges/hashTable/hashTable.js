@@ -65,32 +65,15 @@ class HashTable{
   }
 
 
-  // get(key) {
-  //   let hashedKey = this.hash(key);
-
-  //   if (this.table[hashedKey]) {
-  //     return this.table[hashedKey];
-  //   } else {
-  //     return null;
-  //   }
-  // }
-
   get(key) {
-    let hashedkey = this.hash(key);
-    if (this.table[hashedkey]) {
-      let current = this.table[hashedkey].head;
-      while (current) {
-        if (key === Object.keys(current.value)[0]) {
+    let hashedKey = this.hash(key);
 
-          return Object.values(current.value)[0];
-        }
-        current = current.next;
-      }
+    if (this.table[hashedKey]) {
+      return this.table[hashedKey];
+    } else {
+      return null;
     }
-    return null;
   }
-
-
 
 
   contains(key) {
@@ -107,5 +90,6 @@ class HashTable{
 
 
 module.exports=HashTable;
+
 
 
