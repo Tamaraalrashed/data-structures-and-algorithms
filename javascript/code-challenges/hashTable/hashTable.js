@@ -1,5 +1,40 @@
 'use strict';
-const LinkedList= require('../../linked-list/linked-list');
+
+class Node {
+  constructor(value) {
+    this.value = value;
+    this.next = null;
+  }
+}
+class LinkedList {
+  constructor() {
+    this.head = null;
+  }
+  add(value) {
+    const node = new Node(value);
+    if (!this.head) {
+      this.head = node;
+      return;
+    }
+
+    let current = this.head;
+    while (current.next) {
+      current = current.next;
+    }
+    current.next = node;
+  }
+
+  values() {
+    let values = [];
+    let current = this.head;
+    while (current) {
+      values.push(current.value);
+      current = current.next;
+    }
+    return values;
+  }
+}
+
 
 class HashTable{
 
@@ -15,38 +50,48 @@ class HashTable{
 
     return hash;
   }
- 
+
   add(key, value) {
     let hash = this.hash(key);
     if (!this.table[hash]) {
-      // this.table[hash] = new LinkedList();
-      this.table[hash] = [[key, value]];
+      this.table[hash] = new LinkedList();
+      // this.table[hash] = [[key, value]];
     }
 
-    // let keyValuePair = { [key]: value };
+    let keyValuePair = { [key]: value };
 
-    // this.table[hash].insert(keyValuePair);
-    this.table[hash] = [[key, value]];
+    this.table[hash].add(keyValuePair);
+    // this.table[hash] = [[key, value]];
   }
+
+
+  // get(key) {
+  //   let hashedKey = this.hash(key);
+
+  //   if (this.table[hashedKey]) {
+  //     return this.table[hashedKey];
+  //   } else {
+  //     return null;
+  //   }
+  // }
 
   get(key) {
+    let hashedkey = this.hash(key);
+    if (this.table[hashedkey]) {
+      let current = this.table[hashedkey].head;
+      while (current) {
+        if (key === Object.keys(current.value)[0]) {
 
-    let hash = this.hash(key);
-    const items = this.table[hash];
-   
-    if(items) {
-
-      for (let i = 0; i < items.length; i++) {
-        if (items[i][0] === key) {
-          return items[i][1];
+          return Object.values(current.value)[0];
         }
-
+        current = current.next;
       }
     }
-
-  
-
+    return null;
   }
+
+
+
 
   contains(key) {
     if (!this.get(key)) {
