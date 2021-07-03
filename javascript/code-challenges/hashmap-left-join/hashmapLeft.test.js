@@ -1,4 +1,5 @@
 'use strict ';
+
 const {expect} = require('@jest/globals');
 const HashTable=require('../hashTable/hashTable');
 const leftJoin=require('./hashmapLeft');

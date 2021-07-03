@@ -65,7 +65,20 @@ class HashTable{
   }
 
 
+
   get(key) {
+    let hashedkey = this.hash(key);
+    if (this.table[hashedkey]) {
+      let current = this.table[hashedkey].head;
+      while (current) {
+        if (key === Object.keys(current.value)[0]) return Object.values(current.value)[0];
+        current = current.next;
+      }
+    }
+    return null;
+  }
+
+  getLeft(key) {
     let hashedKey = this.hash(key);
 
     if (this.table[hashedKey]) {
@@ -84,8 +97,8 @@ class HashTable{
       return true;
     }
   }
-}
 
+}
 
 
 

@@ -1,4 +1,5 @@
 'use strict ';
+
 const HashTable=require('../hashTable/hashTable.js');
 
 function leftJoin(leftTable,rightTable){
@@ -14,10 +15,10 @@ function leftJoin(leftTable,rightTable){
   for (let key of values){
     // console.log('dddd',typeof(key[0]) );
     if(key)
-    {let left=leftTable.get(key[0]);
-      console.log('dddd', Object.values(left.head.value) );
+    {let left=leftTable.getLeft(key[0]);
+      // console.log('dddd', Object.values(left.head.value) );
 
-      let right= rightTable.get(key[0]);
+      let right= rightTable.getLeft(key[0]);
       if(right){
         newTable.add(key[0],[...Object.values(left.head.value),...Object.values(right.head.value) ]);
       }
